@@ -1,0 +1,58 @@
+
+get https://localhost:7291/sample/GetUsers
+
+###
+
+get https://localhost:7291/sample/GetUsersbyid?id=1
+
+
+
+###
+POST https://localhost:7291/sample/InsertUser HTTP/1.1
+content-type: application/json
+
+{
+    "UID": 3,
+    "NRC": "0031",
+    "Mobile_no": "2322442",
+    "Email": "yekyawaung@gmail.com",
+    "PIN": "78979676",
+    "UserType": "R",
+    "Status": "-",
+    "forcedchangepin": true,
+    "DeleteFlag":false,
+    "editedAt": "2022-01-27",
+    "createdAt": "2022-01-27"
+    
+} 
+
+###
+
+POST https://localhost:7291/sample/UpdateUser HTTP/1.1
+content-type: application/json
+
+{
+    "UID": 3,
+    "NRC": "003",
+    "Mobile_no": "2322442",
+    "Email": "yekyawaung@gmail.com",
+    "PIN": "78979676",
+    "UserType": "R",
+    "Status": "-",
+    "forcedchangepin": true,
+    "DeleteFlag":false,
+    "editedAt": "2022-01-27",
+    "createdAt": "2022-01-27"
+
+} 
+
+###
+
+POST https://localhost:7291/sample/DeleteUser HTTP/1.1
+content-type: application/json
+
+{
+    "UID": 3,
+    "DeleteFlag":true
+
+} 
